@@ -1,0 +1,150 @@
+.hero {
+    width: 100%;
+    background: linear-gradient(180deg, #ada996, #f2f2f2, #dbdbdb, #eaeaea 60%);
+    display: flex;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 180px;
+    line-height: 1.1;
+}
+
+.hero-left h2 {
+    color: black;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.hero-left p {
+    color: black;
+    font-size: 100px;
+    font-weight: 700;
+
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.logo-icon img {
+    width: 300px;
+    height: auto
+}
+
+.hero-latest-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 300px;
+    height: 70px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 65px;
+    border-radius: 75px;
+    background: rgb(188, 77, 17);
+    color: white;
+
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hero-right img {
+    height: 700px;
+}
+
+@media(max-width:1280px) {
+    .hero-left {
+        padding-left: 100px;
+    }
+
+    .hero-left h2 {
+        font-size: 22px;
+    }
+    .hero-left p{
+        font-size: 70px;
+    }
+    .logo-icon img{
+        width: 160px;
+    }
+    .hero-latest-btn{
+        gap: 10px;
+        width: 250px;
+        height: 60px;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    .hero-right img{
+        width: 600px;
+        height: 700px;
+    }
+   
+}
+@media(max-width:1024px) {
+    .hero-left {
+        padding-left: 80px;
+    }
+
+    .hero-left h2 {
+        font-size: 20px;
+    }
+    .hero-left p{
+        font-size: 50px;
+    }
+    .logo-icon img{
+        width: 120px;
+    }
+    .hero-latest-btn{
+        
+        width: 220px;
+        height: 50px;
+        font-size: 16px;
+       
+    }
+    .hero-right img{
+        width: 500px;
+        height: 600px;
+       
+    }
+}
+@media(max-width:800px) {
+    .hero-left {
+        padding-left: 30px;
+    }
+
+    .hero-left h2 {
+        font-size: 16px;
+    }
+    .hero-left p{
+        font-size: 40px;
+    }
+    .logo-icon img{
+        width: 120px;
+    }
+    .hero-latest-btn{
+        
+        width: 220px;
+        height: 50px;
+        font-size: 16px;
+       
+    }
+    .hero-right img{
+        width: 400px;
+        height: 500px;
+       
+    }
+}

@@ -1,0 +1,52 @@
+.newsletter{
+    width: 65%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0px 330px;
+    margin-top: 80px;
+    gap: 30px;
+    background: linear-gradient(180deg,#ada996,#f2f2f2,#dbdbdb,#eaeaea 60%);
+   
+}
+.newsletter h1{
+    font-size: 55px;
+    font-weight: 600;
+     color: black;
+}
+.newsletter p{
+    font-size: 20px;
+}
+.newsletter div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 730px;
+    height: 80px;
+    border-radius: 80px;
+    border: 1px soild white;
+}
+.newsletter input{
+    width: 500px;
+    border-radius: 10px;
+    height: 60px;
+    border-left: 30px;
+    font-family: "Bebas Neue", sans-serif;
+    border: none;
+   outline: none;
+   font-size: 20px;
+
+}
+.newsletter div button{
+    width: 210px;
+    height: 70px;
+    border-radius: 80px;
+    background: black;
+    color: white;
+     font-family: "Bebas Neue", sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+}

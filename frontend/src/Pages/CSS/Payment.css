@@ -1,0 +1,316 @@
+/* -----------------------------------  
+   MODAL BACKDROP (Glass Blur + Dim)  
+----------------------------------- */  
+.pf-modal {  
+  position: fixed;  
+  inset: 0;  
+  display: flex;  
+  justify-content: center;  
+  align-items: flex-end;  
+  background: rgba(0, 0, 0, 0.55); /* fallback */  
+  -webkit-backdrop-filter: blur(6px); /* Safari / WebKit */  
+  backdrop-filter: blur(6px);  
+  z-index: 9999;  
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui;  
+  transition: background .3s ease;  
+  /* Create stacking context for backdrop-filter to work reliably */  
+  transform: translate3d(0, 0, 0);  
+  will-change: transform;  
+}  
+
+@media (min-width: 900px) {  
+  .pf-modal {  
+    align-items: center;  
+  }  
+}  
+
+/* -----------------------------------  
+   BOTTOM SHEET (or CARD)  
+----------------------------------- */  
+.pf-sheet {  
+  width: 100%;  
+  max-width: 520px;  
+  background: rgba(255, 255, 255, 0.98);  
+  border-radius: 18px 18px 0 0;  
+  padding: 24px 24px 32px;  
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.28);  
+  border: 1px solid rgba(255, 255, 255, 0.2);  
+  animation: pfSlideUp .38s cubic-bezier(.25, .9, .35, 1);  
+  position: relative;  
+}  
+
+@media (min-width: 900px) {  
+  .pf-sheet {  
+    max-width: 420px;  
+    border-radius: 20px;  
+    animation: pfFadeIn .3s ease;  
+  }  
+}  
+
+@keyframes pfFadeIn {  
+  from {  
+    opacity: 0;  
+    transform: scale(0.96);  
+  }  
+  to {  
+    opacity: 1;  
+    transform: scale(1);  
+  }  
+}  
+
+/* -----------------------------------  
+   GRIP / SWIPE INDICATOR  
+----------------------------------- */  
+.pf-grip {  
+  width: 65px;  
+  height: 6px;  
+  background: #dcdcdc;  
+  border-radius: 8px;  
+  margin: 6px auto 16px;  
+}  
+
+/* -----------------------------------  
+   HEADER  
+----------------------------------- */  
+.pf-header-row {  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+}  
+
+.pf-title {  
+  font-size: 20px;  
+  font-weight: 700;  
+}  
+
+.pf-sub {  
+  font-size: 13px;  
+  color: #666;  
+}  
+
+.pf-small-logo {  
+  width: 48px;  
+  height: 48px;  
+  object-fit: contain;  
+  border-radius: 8px;  
+}  
+
+.pf-icon-btn {  
+  border: none;  
+  background: transparent;  
+  font-size: 20px;  
+  cursor: pointer;  
+  opacity: 0.7;  
+  transition: opacity 0.2s;  
+}  
+
+.pf-icon-btn:hover {  
+  opacity: 1;  
+}  
+
+/* -----------------------------------  
+   APP LIST / UPI BUTTONS  
+----------------------------------- */  
+.pf-list {  
+  display: flex;  
+  flex-direction: column;  
+  gap: 12px;  
+  margin-top: 16px;  
+}  
+
+.pf-app-btn {  
+  display: flex;  
+  align-items: center;  
+  gap: 14px;  
+  padding: 14px 16px;  
+  border-radius: 14px;  
+  border: 1px solid #ececec;  
+  background: #ffffff;  
+  cursor: pointer;  
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;  
+}  
+
+.pf-app-btn:hover {  
+  transform: translateY(-4px);  
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);  
+  background: #fafafa;  
+}  
+
+.pf-app-logo {  
+  width: 50px;  
+  height: 50px;  
+  object-fit: contain;  
+}  
+
+.pf-app-label {  
+  font-weight: 700;  
+  font-size: 16px;  
+}  
+
+.pf-app-meta {  
+  margin-left: auto;  
+  color: #777;  
+  font-size: 13px;  
+}  
+
+/* -----------------------------------  
+   PIN / UPI PIN ENTRY  
+----------------------------------- */  
+.pf-pin-card {  
+  padding: 20px;  
+  border-radius: 16px;  
+  border: 1px solid #e5e5e5;  
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);  
+}  
+
+.pf-pin-title {  
+  font-weight: 700;  
+  font-size: 18px;  
+  text-align: center;  
+  margin-bottom: 4px;  
+}  
+
+.pf-pin-sub {  
+  font-size: 13px;  
+  color: #555;  
+  text-align: center;  
+  margin-bottom: 16px;  
+}  
+
+.pf-pin-display {  
+  display: flex;  
+  gap: 14px;  
+  justify-content: center;  
+  margin-bottom: 16px;  
+}  
+
+.pf-pin-dot {  
+  width: 40px;  
+  height: 40px;  
+  border-radius: 8px;  
+  border: 2px dashed #ddd;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  font-size: 22px;  
+}  
+
+/* Keypad */  
+.pf-keypad {  
+  display: grid;  
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 12px;  
+}  
+
+.pf-key {  
+  padding: 18px;  
+  border-radius: 12px;  
+  background: #f7f7f7;  
+  border: 1px solid #eee;  
+  cursor: pointer;  
+  font-size: 20px;  
+  transition: transform 0.1s ease, background 0.1s ease;  
+}  
+
+.pf-key:hover {  
+  background: #efefef;  
+}  
+
+.pf-key:active {  
+  transform: scale(0.94);  
+}  
+
+.pf-cancel {  
+  background: transparent;  
+  border: none;  
+  color: #1a73e8;  
+  font-size: 14px;  
+  cursor: pointer;  
+  margin-top: 6px;  
+}  
+
+/* -----------------------------------  
+   PROCESSING STATE  
+----------------------------------- */  
+.pf-process {  
+  text-align: center;  
+  padding: 40px 6px;  
+}  
+
+.pf-loader {  
+  width: 80px;  
+  height: 80px;  
+  border-radius: 50%;  
+  border: 10px solid #ececec;  
+  border-top-color: #1a73e8;  
+  animation: pfSpin 1s linear infinite;  
+  margin: auto;  
+}  
+
+@keyframes pfSpin {  
+  to { transform: rotate(360deg); }  
+}  
+
+.pf-process-text {  
+  margin-top: 20px;  
+  color: #444;  
+  font-size: 16px;  
+  font-weight: 600;  
+}  
+
+/* -----------------------------------  
+   SUCCESS SCREEN  
+----------------------------------- */  
+.pf-success {  
+  text-align: center;  
+  padding: 30px 6px;  
+}  
+
+.pf-success-circle {  
+  width: 110px;  
+  height: 110px;  
+  margin: auto;  
+  border-radius: 50%;  
+  background: #0f9d58;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  color: #fff;  
+  font-size: 56px;  
+  transform: scale(0.5);  
+  animation: pfPop .3s cubic-bezier(.25, .9, .3, 1) forwards;  
+}  
+
+@keyframes pfPop {  
+  to { transform: scale(1); }  
+}  
+
+.pf-txn {  
+  color: #444;  
+  font-size: 14px;  
+  margin-top: 12px;  
+}  
+
+.pf-done {  
+  margin-top: 20px;  
+  padding: 12px 22px;  
+  background: #1a73e8;  
+  color: #fff;  
+  border-radius: 10px;  
+  border: none;  
+  cursor: pointer;  
+  font-size: 16px;  
+  transition: background 0.2s ease;  
+}  
+
+.pf-done:hover {  
+  background: #1258b3;  
+}  
+
+/* -----------------------------------  
+   SLIDE-UP (Mobile)  
+----------------------------------- */  
+@keyframes pfSlideUp {  
+  from { transform: translateY(100%); }  
+  to { transform: translateY(0); }  
+}  

@@ -1,0 +1,52 @@
+.Offers{
+height: 60vh;
+width: 84vw;
+display: flex;
+margin: auto;
+ background: linear-gradient(180deg,#ada996,#f2f2f2,#dbdbdb,#eaeaea 60%);
+margin-bottom: 150px;
+margin-top: 70px;
+padding: 0 140px;
+gap: 500px;
+}
+.offers-right{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+.offers-left h1{
+    font-size:80px ;
+    font-weight:600 ;
+     margin-top: 30px;
+     color: black;
+}
+.offers-left p{
+    font-size:22px ;
+    font-weight:600 ;
+     margin-top: 10px;
+}
+.offers-left button{
+    width: 282px;
+    height: 70px;
+    border-radius: 35px;
+    border: none;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top:40px;
+    cursor: pointer;
+    color: aliceblue;
+    background: rgb(188, 77, 17);
+    font-family: "Bebas Neue", sans-serif;
+}
+.offers-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 50px;
+}
+.offers-right img{
+    height: 58vh;
+    width: 18vw;
+}
